@@ -1,130 +1,132 @@
 # Reading Practice App
 
-A desktop application for language learning, featuring document management, translation practice, and vocabulary building.
+言語学習のためのデスクトップアプリケーション。ドキュメント管理、翻訳練習、語彙構築機能を搭載。
 
-## Features
+## 機能
 
-### Document Management
-- Create, edit, and delete documents
-- Dual-pane editor for source text and translation
-- Real-time editing with change detection
-- Search and filter documents
-- Study time tracking
+### ドキュメント管理
+- ドキュメントの作成、編集、削除
+- デュアルペインエディタ（原文と翻訳）
+- リアルタイム編集と変更検知
+- ドキュメントの検索とフィルター
+- 学習時間の記録
 
-### Vocabulary System
-- Add words directly from text selection
-- Multiple meanings and examples per word
-- Context-aware vocabulary storage
-- Language-based filtering
+### 語彙システム
+- テキスト選択から直接単語を追加
+- 単語ごとに複数の意味と例文を管理
+- コンテキスト対応の語彙保存
+- 言語別フィルタリング
 
-### Editor Features
-- Line numbers
-- Word wrap toggle
-- Resizable panes
-- Syntax highlighting
+### エディタ機能
+- 行番号表示
+- 折り返し切り替え（Alt+Z）
+- リサイズ可能なペイン
+- 単語数・文字数カウント
 
-### User Interface
-- Light/Dark mode theme
-- Responsive layout
-- Toast notifications
-- Modal confirmations
+### ユーザーインターフェース
+- ライト/ダークモードテーマ
+- レスポンシブレイアウト
+- トースト通知
+- 確認ダイアログ
 
-## Keyboard Shortcuts
+## キーボードショートカット
 
-| Shortcut | Action |
+| ショートカット | 動作 |
 |----------|--------|
-| `Alt + Z` | Toggle word wrap in editors |
-| `Ctrl + S` / `Cmd + S` | Save current document |
+| `Alt + Z` | エディタの折り返し切り替え |
+| `Ctrl + S` / `Cmd + S` | 現在のドキュメントを保存 |
 
-## Technology Stack
+## 技術スタック
 
-- **Framework**: Tauri 2.0
-- **Frontend**: React + TypeScript
-- **Database**: SQLite
-- **Build Tool**: Vite
+- **フレームワーク**: Tauri 2.0
+- **フロントエンド**: React + TypeScript
+- **データベース**: SQLite
+- **ビルドツール**: Vite
 
-## Recommended IDE Setup
+## 推奨IDE設定
 
 - [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
 
-## Getting Started
+## はじめに
 
-### Prerequisites
-- Node.js (v18 or higher)
-- Rust (latest stable version)
+### 前提条件
+- Node.js (v18以上)
+- Rust (最新の安定版)
 
-### Installation
+### インストール
 
 ```bash
-# Install dependencies
+# 依存関係のインストール
 npm install
 
-# Run in development mode
+# 開発モードで実行
 npm run tauri dev
 
-# Build for production
+# 本番用ビルド
 npm run tauri build
 ```
 
-## Project Structure
+## プロジェクト構造
 
 ```
 reading-practice-app/
-├── src/                    # Frontend source code
-│   ├── components/         # React components
-│   │   ├── common/        # Shared components
-│   │   ├── editor/        # Text editor components
-│   │   ├── iconbar/       # Icon navigation bar
-│   │   ├── layout/        # Layout components
-│   │   ├── modals/        # Modal dialogs
-│   │   ├── sidebar/       # Sidebar components
-│   │   └── vocabulary/    # Vocabulary components
-│   ├── hooks/             # Custom React hooks
-│   ├── styles/            # Global styles
-│   ├── types/             # TypeScript type definitions
-│   └── utils/             # Utility functions
-├── src-tauri/             # Rust backend
-│   ├── migrations/        # Database migrations
-│   └── src/               # Rust source code
+├── src/                    # フロントエンドソースコード
+│   ├── components/         # Reactコンポーネント
+│   │   ├── common/        # 共通コンポーネント
+│   │   ├── editor/        # テキストエディタコンポーネント
+│   │   ├── iconbar/       # アイコンナビゲーションバー
+│   │   ├── layout/        # レイアウトコンポーネント
+│   │   ├── modals/        # モーダルダイアログ
+│   │   ├── sidebar/       # サイドバーコンポーネント
+│   │   └── vocabulary/    # 語彙コンポーネント
+│   ├── hooks/             # カスタムReactフック
+│   ├── styles/            # グローバルスタイル
+│   ├── types/             # TypeScript型定義
+│   └── utils/             # ユーティリティ関数
+├── src-tauri/             # Rustバックエンド
+│   ├── migrations/        # データベースマイグレーション
+│   └── src/               # Rustソースコード
+├── docs/                  # ドキュメント
 └── README.md
 ```
 
-## Features in Detail
+## 機能詳細
 
-### Document Editor
-- Split-pane view for source and translation text
-- Automatic save detection with change indicators
-- Resizable columns for customizable workspace
-- Line-by-line editing with number display
+### ドキュメントエディタ
+- 原文と翻訳用の分割ペインビュー
+- 変更インジケーター付き自動保存検知
+- カスタマイズ可能なワークスペース用リサイズ可能カラム
+- 行番号表示による行単位編集
 
-### Study Timer
-- Track study time per document
-- Start/pause/stop functionality
-- Accumulated time statistics
-- Visual timer display
+### 学習タイマー
+- ドキュメントごとの学習時間記録
+- 開始/一時停止/停止機能
+- 累積時間統計
+- ビジュアルタイマー表示
 
-### Vocabulary Management
-- Context menu for quick word addition
-- Multiple meanings support
-- Example sentences with document linking
-- Language-specific organization
+### 語彙管理
+- クイック追加用コンテキストメニュー
+- 複数の意味をサポート
+- ドキュメントとリンクした例文
+- 言語別整理
+- 検索機能
 
-### Statistics Dashboard
-- Total documents count
-- Vocabulary words count
-- Total study time
-- Per-document statistics
+### 統計ダッシュボード
+- 総ドキュメント数
+- 語彙単語数
+- 総学習時間
+- ドキュメント別統計
 
-## Database Schema
+## データベーススキーマ
 
-The application uses SQLite with the following main tables:
-- `documents` - Document metadata and settings
-- `document_contents` - Document text content
-- `vocabulary` - Vocabulary terms
-- `vocabulary_meanings` - Word meanings
-- `vocabulary_examples` - Example sentences
-- `study_sessions` - Study time tracking
+アプリケーションは以下の主要テーブルでSQLiteを使用しています：
+- `documents` - ドキュメントのメタデータと設定
+- `document_contents` - ドキュメントのテキストコンテンツ
+- `vocabulary` - 語彙用語
+- `vocabulary_meanings` - 単語の意味
+- `vocabulary_examples` - 例文
+- `study_sessions` - 学習時間記録
 
-## License
+## ライセンス
 
-This project is private and not licensed for public use.
+このプロジェクトはMITライセンスの下でライセンスされています。詳細は[LICENSE](LICENSE)ファイルを参照してください。
