@@ -1,0 +1,67 @@
+.document-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 0;
+}
+
+.document-title-input {
+  flex: 1;
+  padding: 8px 12px;
+  font-size: 1rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.document-title-input::placeholder {
+  color: var(--text-tertiary);
+}
+
+.document-title-input:hover:not(:disabled) {
+  border-color: var(--primary-color);
+  background-color: var(--bg-primary);
+}
+
+.document-title-input:focus {
+  border-color: var(--primary-color);
+  background-color: var(--bg-primary);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+.document-title-input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background-color: var(--bg-secondary);
+}
+
+.document-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* ダークモード対応 */
+[data-theme="dark"] .document-title-input {
+  background-color: #2a2a2a;
+  border-color: #404040;
+}
+
+[data-theme="dark"] .document-title-input:hover:not(:disabled) {
+  background-color: #333333;
+  border-color: var(--primary-color);
+}
+
+[data-theme="dark"] .document-title-input:focus {
+  background-color: #333333;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+}
+
+[data-theme="dark"] .document-title-input:disabled {
+  background-color: #2a2a2a;
+}

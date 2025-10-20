@@ -1,0 +1,71 @@
+.text-editor-container {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.line-numbers {
+  flex-shrink: 0;
+  width: 50px;
+  background-color: var(--sub-background);
+  border-right: 1px solid var(--border-color);
+  overflow: hidden;
+  text-align: right;
+  padding: 16px 8px 16px 0;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* 折り返しOFF時・ON時共通 */
+.line-number {
+  min-height: 22.4px; /* 14px * 1.6 = 22.4px (line-height) */
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  line-height: 1.6;
+  padding-top: 0;
+}
+
+.text-editor {
+  flex: 1;
+  width: 100%;
+  height: 100%;
+  padding: 16px;
+  border: none;
+  resize: none;
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 14px;
+  line-height: 1.6;
+  background-color: var(--main-background);
+  color: var(--text-primary);
+  overflow-y: auto;
+  overflow-x: auto;
+  white-space: pre;
+  box-sizing: border-box;
+}
+
+.text-editor.wrap {
+  white-space: pre-wrap;
+  overflow-x: hidden;
+}
+
+.text-editor:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.text-editor:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.text-editor::placeholder {
+  color: var(--text-secondary);
+  opacity: 0.6;
+}

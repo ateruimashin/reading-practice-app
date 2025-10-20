@@ -1,0 +1,135 @@
+.app-footer {
+  display: flex;
+  align-items: center;
+  height: 48px;
+  padding: 0 16px;
+  background-color: var(--sub-background);
+  border-top: 1px solid var(--border-color);
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.footer-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.timer-section {
+  flex: 1;
+  gap: 12px;
+}
+
+.language-section {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.word-count-section {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.stat-separator {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.stats-section {
+  display: flex;
+  gap: 16px;
+}
+
+.footer-divider {
+  width: 1px;
+  height: 32px;
+  background-color: var(--border-color);
+}
+
+.btn-icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-primary);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.btn-icon:hover:not(:disabled) {
+  background-color: var(--hover-background);
+}
+
+.btn-icon:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* 再生ボタン: 緑色 */
+.btn-icon.play {
+  background-color: var(--success-color);
+  color: white;
+  border-color: var(--success-color);
+}
+
+.btn-icon.play:hover:not(:disabled) {
+  background-color: #45a049;
+  border-color: #45a049;
+}
+
+/* 一時停止ボタン: オレンジ色 */
+.btn-icon.pause {
+  background-color: #ff9800;
+  color: white;
+  border-color: #ff9800;
+}
+
+.btn-icon.pause:hover:not(:disabled) {
+  background-color: #f57c00;
+  border-color: #f57c00;
+}
+
+/* 停止ボタン: 赤色 */
+.btn-icon.stop {
+  background-color: var(--danger-color);
+  color: white;
+  border-color: var(--danger-color);
+}
+
+.btn-icon.stop:hover:not(:disabled) {
+  background-color: var(--danger-hover);
+  border-color: var(--danger-hover);
+}
+
+.timer-display {
+  font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+  min-width: 90px;
+  transition: color 0.2s;
+}
+
+.timer-display.running {
+  color: var(--success-color);
+  font-weight: 600;
+}
+
+.language-arrow {
+  color: var(--text-secondary);
+  font-size: 16px;
+}
+
+.stat-item {
+  font-size: 13px;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
