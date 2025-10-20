@@ -1,0 +1,230 @@
+.vocabulary-detail-modal {
+  max-width: 700px;
+}
+
+.vocab-detail-section {
+  margin-bottom: 30px;
+}
+
+.vocab-detail-header {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.term-display {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.term-display h3 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.term-edit-controls {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.term-edit-input {
+  flex: 1;
+  min-width: 200px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: var(--main-background);
+  color: var(--text-primary);
+}
+
+.term-edit-input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+}
+
+.vocab-meta {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.vocab-meta p {
+  margin: 5px 0;
+}
+
+.meanings-section {
+  margin-top: 30px;
+}
+
+.meanings-section h4 {
+  margin: 0 0 15px 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.meanings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.meaning-card {
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 15px;
+  background-color: var(--sub-background);
+}
+
+.meaning-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.meaning-content {
+  flex: 1;
+}
+
+.meaning-text {
+  margin: 0 0 8px 0;
+  font-size: 1rem;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+.meaning-context {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.meaning-actions {
+  display: flex;
+  gap: 8px;
+  align-items: flex-start;
+}
+
+.meaning-edit-controls {
+  flex: 1;
+}
+
+.meaning-edit-controls .form-group {
+  margin-bottom: 10px;
+}
+
+.button-group {
+  display: flex;
+  gap: 10px;
+}
+
+.examples-section {
+  margin-top: 15px;
+  padding-top: 15px;
+  border-top: 1px solid var(--border-color);
+}
+
+.examples-section h6 {
+  margin: 0 0 10px 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.examples-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.example-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.example-item:last-child {
+  border-bottom: none;
+}
+
+.example-text {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.add-meaning-form {
+  margin-top: 25px;
+  padding: 20px;
+  background-color: var(--hover-background);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.add-meaning-form h5 {
+  margin: 0 0 15px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.add-meaning-form .form-group {
+  margin-bottom: 15px;
+}
+
+.add-meaning-form .form-group:last-of-type {
+  margin-bottom: 15px;
+}
+
+.btn-icon {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.btn-icon:hover {
+  background-color: var(--hover-background);
+}
+
+.btn-icon-small {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+  flex-shrink: 0;
+}
+
+.btn-icon-small:hover {
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: 0.85rem;
+}
+
+.empty-message {
+  color: var(--text-secondary);
+  font-style: italic;
+  margin: 10px 0;
+}

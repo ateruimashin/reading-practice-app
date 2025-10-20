@@ -1,0 +1,64 @@
+.icon-bar {
+  width: 48px;
+  height: 100%;
+  background-color: var(--sub-background);
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+}
+
+.icon-bar-icons {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 0;
+}
+
+.icon-bar-button {
+  width: 48px;
+  height: 48px;
+  background: transparent;
+  border: none;
+  border-left: 2px solid transparent;
+  cursor: pointer;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  color: var(--text-primary);
+  position: relative;
+  filter: grayscale(0.3) opacity(0.85);
+}
+
+.icon-bar-button:hover {
+  background-color: var(--hover-background);
+  filter: grayscale(0) opacity(1);
+}
+
+.icon-bar-button.active {
+  background-color: var(--hover-background);
+  border-left-color: var(--primary-color);
+  filter: grayscale(0) opacity(1);
+}
+
+.icon-bar-button.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--primary-color);
+}
+
+/* ライトモードでの視認性向上 */
+[data-theme="light"] .icon-bar-button {
+  filter: grayscale(0.2) brightness(0.7) opacity(0.85);
+}
+
+[data-theme="light"] .icon-bar-button:hover,
+[data-theme="light"] .icon-bar-button.active {
+  filter: grayscale(0) brightness(0.85) opacity(1);
+}
