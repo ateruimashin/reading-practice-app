@@ -10,6 +10,7 @@ interface AddVocabularyModalProps {
   contextText?: string;
   documentId?: number;
   language: LanguageCode;
+  onError?: (message: string) => void;
 }
 
 function AddVocabularyModal({ 
@@ -18,7 +19,8 @@ function AddVocabularyModal({
   selectedText, 
   contextText = '',
   documentId,
-  language 
+  language,
+  onError
 }: AddVocabularyModalProps) {
   const [term, setTerm] = useState('');
   const [meaning, setMeaning] = useState('');
@@ -42,12 +44,16 @@ function AddVocabularyModal({
     e.preventDefault();
     
     if (!term.trim() || !meaning.trim()) {
-      alert('Term and meaning are required');
+      if (onError) {
+        onError('Term and meaning are required');
+      }
       return;
     }
 
     if (language === 'none') {
-      alert('Please set the source language first');
+      if (onError) {
+        onError('Please set the source language first');
+      }
       return;
     }
 
@@ -73,11 +79,13 @@ function AddVocabularyModal({
         );
       }
       
-      alert('Vocabulary added successfully!');
+      // 成功時は何も表示せずにモーダルを閉じる
       handleClose();
     } catch (error) {
       console.error('Failed to add vocabulary:', error);
-      alert('Failed to add vocabulary');
+      if (onError) {
+        onError('Failed to add vocabulary');
+      }
     } finally {
       setIsSubmitting(false);
     }
