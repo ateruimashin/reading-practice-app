@@ -466,6 +466,7 @@ function MainLayout({ onDocumentChange, onLanguageChange, wordWrap = false, onWo
         contextText={contextText}
         documentId={currentDocument?.id}
         language={sourceLanguage}
+        onError={(message) => setToast({ message, type: 'error' })}
       />
       
       {/* トースト通知 */}
